@@ -1,5 +1,6 @@
 :root {
     --form-control-color: rebeccapurple;
+    --form-control-disabled: #959495;
 }
 
 .form-control {
@@ -48,4 +49,10 @@ input[type="checkbox"]:checked::before {
 input[type="checkbox"]:focus {
     outline: max(2px, 0.15em) solid currentColor;
     outline-offset: max(2px, 0.15em);
+}
+
+input[type="checkbox"]:disabled {
+    --form-control-color: var(--form-control-disabled);
+    color: var(--form-control-disabled);
+    cursor: not-allowed;
 }
